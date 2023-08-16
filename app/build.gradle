@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.kang.ardemo.ardemo"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+//        ndk {
+//            // 设置支持的 SO 库构架，注意这里要根据你的实际情况来设置
+//            abiFilters 'armeabi-v7a'
+//        }
+    }
+    signingConfigs {
+        test {
+            storeFile file('ardemo.jks')
+            storePassword '888888'
+            keyAlias 'ardemo'
+            keyPassword '888888'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.google.ar:core:1.14.0'
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.14.0'
+    implementation 'com.google.ar.sceneform:core:1.14.0'
+    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.3'
+}
+apply plugin: 'replugin-plugin-gradle'

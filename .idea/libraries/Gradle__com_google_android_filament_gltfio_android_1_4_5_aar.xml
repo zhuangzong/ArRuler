@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.filament:gltfio-android:1.4.5@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f0878c287381361cd9c66d1d9386a20/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/3f0878c287381361cd9c66d1d9386a20/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.filament/gltfio-android/1.4.5/f1e3bea428e92958b860ff362dc371d930fc4c09/gltfio-android-1.4.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
